@@ -3,8 +3,13 @@ import csv
 from datetime import date
 
 r = requests.get('https://api.coinmarketcap.com/v1/ticker/?convert=INR&limit=2')
-print(r.json())
+res = (r.json())
 
-today = date.today()
-btc = open("BTC","w+")
-eth = open("ETH","w+")
+print type(res)
+print res
+
+# today = date.today()
+# with open("BTC","w+") as f:
+# 	a = csv.DictWriter (f, res.keys())
+# 	a.writeheader
+# 	a.writerow(res)
