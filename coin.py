@@ -9,7 +9,7 @@ res = (r.json())
 keys = res[0].keys()
 today = date.today()
 for item in res:
-	with open(str(item['id'])+"_"+str(today)+".csv","w+") as f:
+	with open(item['id']+"_"+str(today)+".csv","w+") as f:
 		a = csv.DictWriter (f, keys)
 		a.writeheader()
 		a.writerows(res)
